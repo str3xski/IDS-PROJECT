@@ -1,5 +1,7 @@
 package Command;
-
+import DTO.MovieDTO;
+import pojo.Movie;
+import service.MovieService;
 
 /*
 
@@ -10,19 +12,42 @@ se necessario, di ripristinare istantaneamente lo stato originale in caso di ann
 
 */
 
+
+
 public class EditMovieCommand implements Command {
+
+    private final MovieService movieService;
+    private final MovieDTO movieDTO;
+
+    private final Movie originalMovie;
+    private Movie updatedMovie;
+
+    public EditMovieCommand(MovieService movieService, Movie originalMovie, MovieDTO movieDTO) {
+        this.movieService = movieService;
+        this.originalMovie = originalMovie;
+        this.movieDTO = movieDTO;
+    }
 
     @Override
     public void execute() throws Exception {
+        this.updatedMovie = movieService.editMovie(originalMovie.getId(), movieDTO);
     }
 
     @Override
     public void undo() throws Exception {
+        movieService.updateMovie(this.originalMovie);
     }
 
     @Override
     public void accept(CommandVisitor visitor) {
+        visitor.visit(this);
     }
 
+    public Movie getUpdatedMovie() {
+        return updatedMovie;
+    }
 
+    public Movie getOriginalMovie() {
+        return originalMovie;
+    }
 }
