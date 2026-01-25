@@ -2,7 +2,7 @@ package service;
 
 import pojo.Movie;
 import java.util.List;
-
+import java.util.Comparator;
 
 /*
 
@@ -16,6 +16,11 @@ garantendo che l'ordine sia coerente con la direzione scelta.
 public class SortByRatingStrategy implements SortingStrategy {
     @Override
     public void sort(List<Movie> movies, SortDirection direction) {
-      
+        Comparator<Movie> comparator = Comparator.comparingInt(Movie::getRating);
+
+        if (direction == SortDirection.DESCENDING)
+            comparator = comparator.reversed();
+
+        movies.sort(comparator);
     }
 }
