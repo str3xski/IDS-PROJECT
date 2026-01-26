@@ -18,9 +18,9 @@ e i menu della finestra alle funzioni logiche del controller. Senza di essa,
 i componenti grafici sarebbero solo icone inerti; grazie ai suoi listener, ogni azione dell'utente (un clic, una ricerca o un tasto premuto) scatena una risposta precisa nel programma.
  */
 
-
 public class ViewListenerManager {
 
+    // Campi privati (Assicurati che i nomi corrispondano a quelli nel costruttore)
     private final MovieView movieView;
     private final MovieController movieController;
     private final CommandVisitor visitorUndo;
@@ -29,10 +29,12 @@ public class ViewListenerManager {
     public ViewListenerManager(MovieView view, MovieController controller) {
         this.movieView = view;
         this.movieController = controller;
+        // Inizializzazione dei visitor per Undo e Redo
         this.visitorUndo = new UndoViewVisitor(view);
         this.visitorRedo = new RedoViewVisitor(view);
     }
 
+    /* Punto di attivazione per tutti i listener */
     public void bindListeners() {
         attivaListenerForm();
         attivaListenerAzioni();
@@ -41,6 +43,7 @@ public class ViewListenerManager {
         attivaListenerUndoRedo();
     }
 
+    // Gestione inserimento e annullamento dati nel modulo
     private void attivaListenerForm() {
         movieView.getInputPanel().getSubmitButton().addActionListener(e -> {
             if (movieController == null) return;
@@ -69,6 +72,7 @@ public class ViewListenerManager {
         });
     }
 
+    // Gestione modifica (doppio click o tasto) ed eliminazione
     private void attivaListenerAzioni() {
         movieView.getActionPanel().getEditButton().addActionListener(e -> {
             Movie film = prendiFilmSelezionato();
@@ -99,6 +103,7 @@ public class ViewListenerManager {
         });
     }
 
+    // Gestione Undo/Redo tramite il pattern Visitor
     private void attivaListenerUndoRedo() {
         movieView.getToolbarPanel().getUndoButton().addActionListener(e -> {
             if (movieController != null) {
@@ -123,6 +128,7 @@ public class ViewListenerManager {
         });
     }
 
+    // Ordinamento, filtri e reset della vista
     private void attivaListenerFiltri() {
         movieView.getToolbarPanel().getSortComboBox().addActionListener(e -> {
             if (movieController != null) {
@@ -166,6 +172,7 @@ public class ViewListenerManager {
         });
     }
 
+    // Campo di ricerca testuale
     private void attivaListenerRicerca() {
         Runnable azioneCerca = () -> {
             if (movieController != null) movieController.searchMovies(movieView.getToolbarPanel().getSearchQuery());
@@ -173,6 +180,8 @@ public class ViewListenerManager {
         movieView.getToolbarPanel().getSearchButton().addActionListener(e -> azioneCerca.run());
         movieView.getToolbarPanel().getSearchField().addActionListener(e -> azioneCerca.run());
     }
+
+    // --- Metodi Helper per la gestione interna ---
 
     private void vaiInModalitaEdit(Movie m) {
         FormState editState = new EditModeState(m);
@@ -186,15 +195,15 @@ public class ViewListenerManager {
             mostraPopupErrore("Nessuna Selezione", "Per favore, seleziona un film dalla tabella.");
             return null;
         }
-    
-        return movieView.getCurrentMoviesList().get(riga);
+        int index = movieView.getMovieTable().convertRowIndexToModel(riga);
+        return movieView.getCurrentMoviesList().get(index);
     }
 
     private Movie prendiFilmDaClick(Point p) {
         int riga = movieView.getMovieTable().rowAtPoint(p);
         if (riga >= 0) {
-
-            return movieView.getCurrentMoviesList().get(riga);
+            int index = movieView.getMovieTable().convertRowIndexToModel(riga);
+            return movieView.getCurrentMoviesList().get(index);
         }
         return null;
     }

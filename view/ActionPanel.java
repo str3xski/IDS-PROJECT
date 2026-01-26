@@ -1,17 +1,15 @@
 package view;
+
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import javax.swing.border.TitledBorder;
 import java.awt.*;
-
 
 /*
  * Pannello laterale dedicato ai comandi rapidi di gestione.
  * Fornisce un'area visiva distinta per le operazioni di modifica 
  * e rimozione degli elementi selezionati nella lista.
  */
-
-
 public class ActionPanel extends JPanel {
 
     private final JButton btnModifica;

@@ -1,11 +1,272 @@
 [
   {
-    "id": "3377973f-fc85-4585-9593-373d796dda9c",
-    "title": "io",
-    "director": "io",
+    "id": "1a2b3c01-1111-4aaa-8bbb-000000000001",
+    "title": "Inception",
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "rating": 5,
+    "category": "FANTASCIENZA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c02-2222-4aaa-8bbb-000000000002",
+    "title": "Il Padrino",
+    "director": "Francis Ford Coppola",
+    "year": 1972,
+    "rating": 4,
+    "category": "DRAMMATICO",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c03-3333-4aaa-8bbb-000000000003",
+    "title": "Interstellar",
+    "director": "Christopher Nolan",
+    "year": 2014,
+    "rating": 5,
+    "category": "FANTASCIENZA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c04-4444-4aaa-8bbb-000000000004",
+    "title": "Parasite",
+    "director": "Bong Joon-ho",
+    "year": 2019,
+    "rating": 5,
+    "category": "HORROR",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c05-5555-4aaa-8bbb-000000000005",
+    "title": "Pulp Fiction",
+    "director": "Quentin Tarantino",
+    "year": 1994,
+    "rating": 5,
+    "category": "FANTASCIENZA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c06-6666-4aaa-8bbb-000000000006",
+    "title": "Blade Runner 2049",
+    "director": "Denis Villeneuve",
+    "year": 2017,
+    "rating": 4,
+    "category": "FANTASCIENZA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c07-7777-4aaa-8bbb-000000000007",
+    "title": "The Lighthouse",
+    "director": "Robert Eggers",
+    "year": 2019,
+    "rating": 4,
+    "category": "HORROR",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c08-8888-4aaa-8bbb-000000000008",
+    "title": "Moon",
+    "director": "Duncan Jones",
+    "year": 2009,
+    "rating": 4,
+    "category": "FANTASCIENZA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c09-9999-4aaa-8bbb-000000000009",
+    "title": "Her",
+    "director": "Spike Jonze",
+    "year": 2013,
+    "rating": 4,
+    "category": "SENTIMENTALE",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c10-aaaa-4aaa-8bbb-000000000010",
+    "title": "Whiplash",
+    "director": "Damien Chazelle",
+    "year": 2014,
+    "rating": 5,
+    "category": "DRAMMATICO",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c11-bbbb-4aaa-8bbb-000000000011",
+    "title": "The Prestige",
+    "director": "Christopher Nolan",
+    "year": 2006,
+    "rating": 5,
+    "category": "DRAMMATICO",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c12-cccc-4aaa-8bbb-000000000012",
+    "title": "Donnie Darko",
+    "director": "Richard Kelly",
+    "year": 2001,
+    "rating": 4,
+    "category": "FANTASCIENZA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c13-dddd-4aaa-8bbb-000000000013",
+    "title": "Drive",
+    "director": "Nicolas Winding Refn",
+    "year": 2011,
+    "rating": 4,
+    "category": "AZIONE",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c14-eeee-4aaa-8bbb-000000000014",
+    "title": "The Lobster",
+    "director": "Yorgos Lanthimos",
+    "year": 2015,
+    "rating": 3,
+    "category": "DRAMMATICO",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c15-ffff-4aaa-8bbb-000000000015",
+    "title": "Nightcrawler",
+    "director": "Dan Gilroy",
+    "year": 2014,
+    "rating": 4,
+    "category": "COMMEDIA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c16-1010-4aaa-8bbb-000000000016",
+    "title": "Arrival",
+    "director": "Denis Villeneuve",
+    "year": 2016,
+    "rating": 5,
+    "category": "FANTASCIENZA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c17-2020-4aaa-8bbb-000000000017",
+    "title": "Enemy",
+    "director": "Denis Villeneuve",
+    "year": 2013,
+    "rating": 3,
+    "category": "DRAMMATICO",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c18-3030-4aaa-8bbb-000000000018",
+    "title": "Ex Machina",
+    "director": "Alex Garland",
+    "year": 2014,
+    "rating": 5,
+    "category": "FANTASCIENZA",
+    "status": "VISTO"
+  },
+  {
+    "id": "1a2b3c19-4040-4aaa-8bbb-000000000019",
+    "title": "Oldboy",
+    "director": "Park Chan-wook",
+    "year": 2003,
+    "rating": 4,
+    "category": "ALTRO",
+    "status": "VISTO"
+  },
+  {
+    "id": "3a1f0011-aaaa-4ccc-9ddd-200000000001",
+    "title": "The Happening",
+    "director": "M. Night Shyamalan",
+    "year": 2008,
+    "rating": 1,
+    "category": "HORROR",
+    "status": "IN_CORSO"
+  },
+  {
+    "id": "3a1f0012-bbbb-4ccc-9ddd-200000000002",
+    "title": "Jupiter Ascending",
+    "director": "Lana Wachowski, Lilly Wachowski",
+    "year": 2015,
+    "rating": 2,
+    "category": "FANTASCIENZA",
+    "status": "DA_VEDERE"
+  },
+  {
+    "id": "3a1f0013-cccc-4ccc-9ddd-200000000003",
+    "title": "The Room",
+    "director": "Tommy Wiseau",
+    "year": 2003,
+    "rating": 1,
+    "category": "DRAMMATICO",
+    "status": "DA_VEDERE"
+  },
+  {
+    "id": "3a1f0014-dddd-4ccc-9ddd-200000000004",
+    "title": "Battlefield Earth",
+    "director": "Roger Christian",
     "year": 2000,
     "rating": 1,
+    "category": "FANTASCIENZA",
+    "status": "IN_CORSO"
+  },
+  {
+    "id": "3a1f0015-eeee-4ccc-9ddd-200000000005",
+    "title": "Spring Breakers",
+    "director": "Harmony Korine",
+    "year": 2012,
+    "rating": 2,
+    "category": "DRAMMATICO",
+    "status": "DA_VEDERE"
+  },
+  {
+    "id": "3a1f0016-ffff-4ccc-9ddd-200000000006",
+    "title": "Tenet",
+    "director": "Christopher Nolan",
+    "year": 2020,
+    "rating": 3,
     "category": "AZIONE",
+    "status": "IN_CORSO"
+  },
+  {
+    "id": "3a1f0017-1111-4ccc-9ddd-200000000007",
+    "title": "Only God Forgives",
+    "director": "Nicolas Winding Refn",
+    "year": 2013,
+    "rating": 2,
+    "category": "DRAMMATICO",
+    "status": "IN_CORSO"
+  },
+  {
+    "id": "3a1f0018-2222-4ccc-9ddd-200000000008",
+    "title": "The Village",
+    "director": "M. Night Shyamalan",
+    "year": 2004,
+    "rating": 2,
+    "category": "HORROR",
+    "status": "DA_VEDERE"
+  },
+  {
+    "id": "3a1f0019-3333-4ccc-9ddd-200000000009",
+    "title": "An Inconvenient Truth",
+    "director": "Davis Guggenheim",
+    "year": 2006,
+    "rating": 3,
+    "category": "DOCUMENTARIO",
+    "status": "IN_CORSO"
+  },
+  {
+    "id": "3a1f0020-4444-4ccc-9ddd-200000000010",
+    "title": "Movie 43",
+    "director": "Various Directors",
+    "year": 2013,
+    "rating": 1,
+    "category": "COMMEDIA",
+    "status": "DA_VEDERE"
+  },
+  {
+    "id": "1a2b3c20-5050-4aaa-8bbb-000000000020",
+    "title": "Brazil",
+    "director": "Terry Gilliam",
+    "year": 1985,
+    "rating": 4,
+    "category": "FANTASCIENZA",
     "status": "DA_VEDERE"
   }
 ]
