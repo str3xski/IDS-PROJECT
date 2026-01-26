@@ -1,5 +1,4 @@
 package view;
-
 import Command.*;
 
 /*
@@ -11,7 +10,7 @@ i diversi tipi di comandi che sono stati appena rieseguiti e decidere come la vi
 */
 
 
-// Concrete visitor for Redo
+
 public class RedoViewVisitor implements CommandVisitor {
 
     private final MovieView view;
@@ -23,12 +22,13 @@ public class RedoViewVisitor implements CommandVisitor {
     @Override
     public void visit(AddMovieCommand cmd) {
 
-
+        view.selectRowById(cmd.getCreatedMovie().getId());
     }
 
     @Override
     public void visit(EditMovieCommand cmd) {
 
+        view.selectRowById(cmd.getUpdatedMovie().getId());
     }
 
     @Override
