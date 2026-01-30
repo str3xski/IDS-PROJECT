@@ -1,0 +1,6 @@
+In questo progetto si è scelto di adottare test standard tramite metodi main e istruzioni 
+di controllo invece di utilizzare il framework JUnit. Tale scelta è motivata dalla natura 
+didattica e dalle dimensioni contenute dell'applicazione, per la quale era sufficiente 
+verificare il corretto funzionamento delle principali funzionalità senza introdurre dipendenze 
+esterne aggiuntive. I test implementati permettono comunque di validare il comportamento dei 
+metodi in modo ripetibile e controllato.
